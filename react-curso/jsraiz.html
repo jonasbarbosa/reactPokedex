@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>React Raiz</h1>
+    <div id="app"></div>
+    <div id="app"><button onclick="autoDestruicao()">Destruir</button>
+        <button onclick="criarElemento"> Criar Elemento </button></div>
+        
+
+        <script>
+            function autoDestruicao(){
+                const root = document.getElementById('app');
+                const pai = root.parentNode;
+                console.log(pai);
+                pai.removeChild(root);
+            }
+            function criarElemento(){
+                const btn = document.createElement('button');
+                btn.onclick = criarElemento;
+                const texto = document.createTextNode('Criar elemento');
+                btn.appendChild(texto);
+                
+                const root = document.getElementById('app');
+                root.appendChild(btn);
+                }
+                criarElemento();
+        </script>
+</body>
+</html>

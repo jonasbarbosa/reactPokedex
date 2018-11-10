@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Básico de JS </h1>
+    <script>
+     const pessoa = {
+            nome: 'eu',
+            idade: 30
+        };
+     const pessoa2 = {
+            nome: 'eutoo',
+            idade: 30
+        };
+
+        const pessoas = [ pessoa, pessoa2];
+        const eus = pessoas.map (p =>{
+        (p.idade = 30 && p)
+        });
+
+     
+        console.log(eus);    
+        console.log(pessoas);
+        </script>
+</body>
+</html>
